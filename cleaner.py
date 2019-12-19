@@ -7,22 +7,20 @@ morph = pymorphy2.MorphAnalyzer()
 #counter = int(0)
 for line in inp:
 
-    for s in ['!', '@', '$', '%', '^', '&', '*', '(', ')', '.', ',', '?', '-', '_', ';', '+', '=', ':', '"', '\n', '«', '»']:
+    for s in ['!', '@', '$', '%', '^', '&', '*', '(', ')',
+              '.', ',', '?', '-', '_', ';', '+', '=', ':',
+              '"', '\n', '«', '»', '©', '/', "'", '\\', '0',
+              '1', '2', '3', '4', '5', '6', '7', '8', '9',
+              '<', '>', '[', ']']:
         line = line.replace(s, ' ')
 
-    input_string = line.split(" ")
-    RT_hashtag_flag = bool(False)
+    line = line.replace("RT ", "#")
+    line = line.replace("# ", "#")
+    input_string = line.split(" ")[2::]
+    input_string = list(filter(lambda w: not w.startswith("#"), input_string))
     for word in input_string:
 
-        if RT_hashtag_flag:
-            RT_hashtag_flag = False
-            continue
-        if word == "#" or word == "RT":
-            RT_hashtag_flag = True
-            continue
-
         word = word.lower()
-
         t = (morph.tag(word)[0]).POS
         if t in ['PREP', 'CONJ', 'PRCL', 'INTJ', None]:
             continue
