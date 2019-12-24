@@ -17,3 +17,4 @@ Rule 4: availability of good/bad words
 Good - 4602 - 48%
 Bad - 1281 - 13%
 Neutral - 3638 - 38%
+
