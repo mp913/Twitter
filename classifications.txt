@@ -1,0 +1,10 @@
+Rule 1: sum of ratings
+Good - 2857 - 30%
+Bad - 681 - 7%
+Neutral - 5983 - 63%
+
+Rule 2: percentage of ratings
+Good - 198 - 2%
+Bad - 107 - 1%
+Neutral - 9216 - 97%
+
