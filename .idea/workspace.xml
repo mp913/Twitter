@@ -35,7 +35,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Adjactive counter">
+  <component name="RunManager" selected="Python.classification">
     <configuration name="Adjactive counter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Twitter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Adjactive counter" />
         <item itemvalue="Python.classification" />
+        <item itemvalue="Python.Adjactive counter" />
         <item itemvalue="Python.dostoevsky downloader" />
         <item itemvalue="Python.judge" />
         <item itemvalue="Python.twith_length_counter" />

@@ -1,0 +1,27 @@
+clear_dt = open("clear_data.txt", "r", encoding='UTF8')
+data = open("data.txt", "r", encoding='UTF8')
+outp = open("hours.txt", "w", encoding='UTF8')
+
+date_time = list()
+for line in data:
+    if line != "\n":
+        arr = line.split("")
+        date_time.append(arr[0] + " " + arr[1])
+date_time.reverse()
+
+flag = 0
+clear_tweet = list()
+for line in data:
+    if flag != 0:
+        flag += 1
+        flag %= 4
+        continue
+    clear_tweet.append(line)
+    flag += 1
+clear_tweet.reverse()
+
+good_counter = 0
+bad_counter = 0
+normal_counter = 0
+counter = 0
+

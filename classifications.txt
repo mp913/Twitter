@@ -1,20 +1,20 @@
 Rule 1: sum of ratings
-Good - 2857 - 30%
-Bad - 681 - 7%
-Neutral - 5983 - 63%
+Good - 2895 - 29%
+Bad - 650 - 6%
+Neutral - 6455 - 65%
 
 Rule 2: percentage of ratings
-Good - 198 - 2%
-Bad - 107 - 1%
-Neutral - 9216 - 97%
+Good - 196 - 2%
+Bad - 105 - 1%
+Neutral - 9699 - 97%
 
 Rule 3: 3 good words
-Good - 2460 - 26%
-Bad - 1887 - 20%
-Neutral - 5174 - 54%
+Good - 2460 - 25%
+Bad - 1850 - 18%
+Neutral - 5690 - 57%
 
 Rule 4: availability of good/bad words
-Good - 4602 - 48%
-Bad - 1281 - 13%
-Neutral - 3638 - 38%
+Good - 5170 - 52%
+Bad - 1261 - 13%
+Neutral - 3569 - 36%
 
