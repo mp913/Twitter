@@ -1,27 +1,79 @@
-clear_dt = open("clear_data.txt", "r", encoding='UTF8')
 data = open("data.txt", "r", encoding='UTF8')
-outp = open("hours.txt", "w", encoding='UTF8')
 
 date_time = list()
 for line in data:
     if line != "\n":
-        arr = line.split("")
+        arr = line.split(" ")
         date_time.append(arr[0] + " " + arr[1])
+date_time[0] = date_time[0][1:]  # необходимо убрать служебный символ из начала файла
 date_time.reverse()
 
-flag = 0
-clear_tweet = list()
-for line in data:
-    if flag != 0:
-        flag += 1
-        flag %= 4
-        continue
-    clear_tweet.append(line)
-    flag += 1
-clear_tweet.reverse()
 
-good_counter = 0
-bad_counter = 0
-normal_counter = 0
-counter = 0
+def add_10_minutes(s):
+    (date, time) = s.split(" ")
+    (hour, minutes) = time.split(":")
+    minutes = int(minutes)
+    hour = int(hour)
+    if minutes < 50:
+        if hour < 10:
+            hour = "0" + str(hour)
+        ans = date + " " + str(hour) + ":" + str(minutes + 10)
+        return ans
+    minutes = minutes + 10 - 60
+    if minutes < 10:
+        minutes = "0" + str(minutes)
+    hour += 1
+    if hour < 24:
+        if hour < 10:
+            hour = "0" + str(hour)
+        ans = date + " " + str(hour) + ":" + str(minutes)
+        return ans
+    (year, month, day) = date.split("-")
+    day = int(day) + 1
+    if day < 10:
+        day = "0" + str(day)
+    ans = year + "-" + month + "-" + str(day) + " 00" + ":" + str(minutes)
+    return ans
+
+
+for i in range(1, 5):
+    good_counter = 0
+    bad_counter = 0
+    normal_counter = 0
+    counter = 0
+    input_filename = "rule" + str(i) + ".txt"
+    output_filename = "hours" + str(i) + ".txt"
+    input_file = open(input_filename, "r", encoding='UTF8')
+    output_file = open(output_filename, "w", encoding='UTF8')
+
+    list_of_estimations = list()
+    for line in input_file:
+        line.replace("\n", "")
+        list_of_estimations.append(line)
+    list_of_estimations.reverse()
+
+    start_datetime = "2018-07-07 23:54"
+    current_datetime = add_10_minutes(add_10_minutes(add_10_minutes(start_datetime)))
+    i = int(0)
+    #s = date_time[len(date_time)-1]
+    #s = s[1:]
+    #date_time.pop(len(date_time) - 1)
+    #date_time.append(s)
+    while i < len(date_time):
+        while i < len(date_time) and date_time[i] < current_datetime:
+            if list_of_estimations[i] == "-1\n":
+                bad_counter += 1
+            elif list_of_estimations[i] == "1\n":
+                good_counter += 1
+            else:
+                normal_counter += 1
+            counter += 1
+            #print(date_time[i])
+            i += 1
+        print(start_datetime + " - " + current_datetime + " : " + str(counter) + " " +
+              str(round(good_counter/counter, 2)) + "/" +
+              str(round(normal_counter/counter, 2)) + "/" +
+              str(round(bad_counter/counter, 2)), file=output_file)
+        current_datetime = add_10_minutes(current_datetime)
+        #print(current_datetime)
 
