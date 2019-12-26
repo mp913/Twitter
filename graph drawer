@@ -1,22 +1,5 @@
 import matplotlib.pyplot as plt
 
-# barplot для каждого правила определения хороших/плохих/нейтральных твитов
-# сдвоенный barplot для лучших и худших прилагательных
-
-#plt.figure(figsize=(20, 10))
-#fig, ax = plt.subplots()
-#x = [1, 2, 3]
-#y = [1, 2, 3]
-#plt.subploat(2, 1, 1)
-#ax.plot(x, y)
-#ax.set_ylabel('скорость (м/с)')
-#plt.subploat(2, 1, 2)
-#ax.plot(x, y)
-#ax.set_xlabel('время (с)')
-#ax.set_ylabel('скорость (м/с)')
-
-plt.show()
-
 scale = 20
 x_legend_scale = 4
 x_datetime = []
@@ -65,17 +48,3 @@ for i in range(1, 5):
     ax.set_xlabel('Time window')
     ax.set_ylabel('Number of tweets')
     plt.show()
-
-# plt.figure(figsize=(20, 10))
-# plt.stem(x_datetime, y_tweet_amount, label="Number of tweets", basefmt="None")
-# plt.legend()
-# plt.grid(True)
-# plt.show()
-# x = [1, 5, 10, 15, 20]
-# y1 = [1, 7, 3, 5, 11]
-# y2 = [4, 3, 1, 8, 12]
-# plt.figure(figsize=(12, 7))
-# plt.plot(x, y1, 'o-r', alpha=0.7, label="first", lw=5, mec='b', mew=2, ms=10)
-# plt.plot(x, y2, 'v-.g', label="second", mec='r', lw=2, mew=2, ms=12)
-# plt.legend()
-# plt.show()
