@@ -35,7 +35,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.time distribution">
+  <component name="RunManager" selected="Python.graph drawer">
     <configuration name="Adjactive counter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Twitter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="judge" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="graph drawer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Twitter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,7 +111,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/judge.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graph drawer" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.graph drawer" />
         <item itemvalue="Python.time distribution" />
         <item itemvalue="Python.classification" />
         <item itemvalue="Python.Adjactive counter" />
         <item itemvalue="Python.dostoevsky downloader" />
-        <item itemvalue="Python.judge" />
       </list>
     </recent_temporary>
   </component>

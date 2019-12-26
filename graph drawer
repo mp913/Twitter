@@ -1,0 +1,81 @@
+import matplotlib.pyplot as plt
+
+# barplot для каждого правила определения хороших/плохих/нейтральных твитов
+# сдвоенный barplot для лучших и худших прилагательных
+
+#plt.figure(figsize=(20, 10))
+#fig, ax = plt.subplots()
+#x = [1, 2, 3]
+#y = [1, 2, 3]
+#plt.subploat(2, 1, 1)
+#ax.plot(x, y)
+#ax.set_ylabel('скорость (м/с)')
+#plt.subploat(2, 1, 2)
+#ax.plot(x, y)
+#ax.set_xlabel('время (с)')
+#ax.set_ylabel('скорость (м/с)')
+
+plt.show()
+
+scale = 20
+x_legend_scale = 4
+x_datetime = []
+y_tweet_amount = []
+
+for i in range(1, 5):
+    input_filename = "hours" + str(i) + ".txt"
+    input_file = open(input_filename, "r", encoding='UTF8')
+    x_datetime = []
+    y_good = []
+    y_normal = []
+    y_bad = []
+    y_tweet_amount = []
+    for line in input_file:
+        tup = line.split(" ")
+        y_tweet_amount.append(int(tup[6]))
+        proportion = tup[7].split("/")
+        x_datetime.append(tup[4] + "\n" + tup[3])
+        y_good.append(float(proportion[0]))
+        y_normal.append(float(proportion[1]))
+        y_bad.append(float(proportion[2]))
+
+    x_datetime = x_datetime[::scale]
+    y_good = y_good[::scale]
+    y_bad = y_bad[::scale]
+    y_normal = y_normal[::scale]
+    y_tweet_amount = y_tweet_amount[::scale]
+    x_invisible_datetime = []
+
+    for i in range(0, len(x_datetime)):
+        x_invisible_datetime.append(" " * i)
+        if i % x_legend_scale != 0:
+            x_datetime[i] = " " * i
+
+    fig = plt.figure(figsize=(20, 10))
+    ax = fig.add_subplot(2, 1, 1)
+    ax.plot(x_invisible_datetime, y_good, alpha=0.7, label="N_pos", color='r', marker='o', markevery=1)
+    ax.plot(x_invisible_datetime, y_normal, alpha=0.7, label="N", color='g', marker='o', markevery=1)
+    ax.plot(x_invisible_datetime, y_bad, alpha=0.7, label="N_neg", color='b', marker='o', markevery=1)
+    ax.set_ylabel(ylabel="Fraction")
+    ax.legend()
+    ax.grid(True)
+    ax = fig.add_subplot(2, 1, 2)
+    ax.grid(True)
+    ax.stem(x_datetime, y_tweet_amount, label="Number of tweets", basefmt="None")
+    ax.set_xlabel('Time window')
+    ax.set_ylabel('Number of tweets')
+    plt.show()
+
+# plt.figure(figsize=(20, 10))
+# plt.stem(x_datetime, y_tweet_amount, label="Number of tweets", basefmt="None")
+# plt.legend()
+# plt.grid(True)
+# plt.show()
+# x = [1, 5, 10, 15, 20]
+# y1 = [1, 7, 3, 5, 11]
+# y2 = [4, 3, 1, 8, 12]
+# plt.figure(figsize=(12, 7))
+# plt.plot(x, y1, 'o-r', alpha=0.7, label="first", lw=5, mec='b', mew=2, ms=10)
+# plt.plot(x, y2, 'v-.g', label="second", mec='r', lw=2, mew=2, ms=12)
+# plt.legend()
+# plt.show()
