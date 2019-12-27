@@ -9,8 +9,10 @@ e_dictionary['я'] = 0 # слово Я стоит в начале файла и 
 
 for i in range(1, 5):
     experiment_estimation_dictionary = dict()
+    word_amount_dictionary = dict()
     for key in e_dictionary:
         experiment_estimation_dictionary[key] = 0
+        word_amount_dictionary[key] = 0
     input_file = open("clear_data.txt", "r", encoding='UTF8')
     tweet_estimations = open("rule" + str(i) + ".txt", "r", encoding='UTF8')
     for line in input_file:
@@ -21,9 +23,15 @@ for i in range(1, 5):
         words = line.split(" ")
         for word in words:
             if word in e_dictionary:
-                experiment_estimation_dictionary[word] += est
+                experiment_estimation_dictionary[word] += est * words.count(word)
+                word_amount_dictionary[word] += 1
 
     delta = list()
+
+    for word in e_dictionary:
+        if word_amount_dictionary[word] != 0:
+            experiment_estimation_dictionary[word] = experiment_estimation_dictionary[word] / word_amount_dictionary[word]
+
     for word in e_dictionary:
         delta.append([abs(experiment_estimation_dictionary[word]-e_dictionary[word]), word])
 
@@ -43,7 +51,7 @@ for i in range(1, 5):
     counter = 0
     bullseye_counter = 0
     for tup in delta:
-        if abs(tup[0]) < 2:
+        if abs(tup[0]) < 1:
             bullseye_counter += 1
         counter += 1
 

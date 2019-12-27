@@ -12,7 +12,7 @@ for i in range(1, 5):
     for j in range(5):
         tup = best_worst_input_file.readline().split(' ')
         labels.append(tup[0])
-        number.append(int(tup[1]))
+        number.append(float(tup[1]))
 
     plt.xticks(range(5), labels)
     plt.title(best_label)
@@ -29,7 +29,7 @@ for i in range(1, 5):
     for j in range(5):
         tup = best_worst_input_file.readline().split(' ')
         labels.append(tup[0])
-        number.append(int(tup[1]))
+        number.append(float(tup[1]))
 
     plt.xticks(range(5), labels)
     plt.title(best_label)
