@@ -1,7 +1,3 @@
-import dostoevsky
-from dostoevsky.tokenization import RegexTokenizer
-from dostoevsky.models import FastTextSocialNetworkModel
-
 inp = open("clear_data.txt", "r", encoding='UTF8')
 in_dict = open("estimations.txt", "r", encoding='UTF8')
 outp = open("classifications.txt", "w", encoding='UTF8')
