@@ -27,7 +27,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.estimation_check">
+  <component name="RunManager" selected="Python.estimation_check_barploats">
     <configuration name="Barploats drawer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Twitter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -49,27 +49,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Twitter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classification.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="estimation_check" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Twitter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,6 +62,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/estimation_check.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="estimation_check_barploats" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Twitter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/estimation_check_barploats.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.estimation_check_barploats" />
         <item itemvalue="Python.estimation_check" />
         <item itemvalue="Python.Barploats drawer" />
         <item itemvalue="Python.graph drawer" />
         <item itemvalue="Python.time distribution" />
-        <item itemvalue="Python.classification" />
       </list>
     </recent_temporary>
   </component>
@@ -182,22 +182,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1258" height="258" key="GridCell.Tab.0.bottom" timestamp="1577464062135">
+    <state width="1258" height="258" key="GridCell.Tab.0.bottom" timestamp="1577465037309">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1577464062135" />
-    <state width="1258" height="258" key="GridCell.Tab.0.center" timestamp="1577464062135">
+    <state width="1258" height="258" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1577465037309" />
+    <state width="1258" height="258" key="GridCell.Tab.0.center" timestamp="1577465037309">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1577464062135" />
-    <state width="1258" height="258" key="GridCell.Tab.0.left" timestamp="1577464062134">
+    <state width="1258" height="258" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1577465037309" />
+    <state width="1258" height="258" key="GridCell.Tab.0.left" timestamp="1577465037309">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1577464062134" />
-    <state width="1258" height="258" key="GridCell.Tab.0.right" timestamp="1577464062135">
+    <state width="1258" height="258" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1577465037309" />
+    <state width="1258" height="258" key="GridCell.Tab.0.right" timestamp="1577465037309">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1258" height="258" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1577464062135" />
+    <state width="1258" height="258" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1577465037309" />
     <state width="1258" height="319" key="GridCell.Tab.1.bottom" timestamp="1577464026936">
       <screen x="0" y="0" width="1280" height="984" />
     </state>

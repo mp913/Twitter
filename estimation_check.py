@@ -1,7 +1,3 @@
-import matplotlib
-import matplotlib.pyplot as plt
-
-
 in_dict = open("estimations.txt", "r", encoding='UTF8')
 
 e_dictionary = dict()
